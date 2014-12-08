@@ -49,7 +49,7 @@
 			$strSearch = @$_POST['movie_link'];
 
 			if ($strSearch) {
-				$oIMDB = new IMDB($strSearch, 10);
+				$oIMDB = new IMDB($strSearch, '');//10
 			if ($oIMDB->isReady) {
 					echo '<p>Movie Title: <b>' . $oIMDB->getTitle() . '</b></p>';
 					echo '<p><img src="' . $oIMDB->getPoster() . '" style="float:left;margin:4px 10px 10px 0;"> <b>About The Movie:</b> ' . $oIMDB->getPlot() . '</p>';
